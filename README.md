@@ -1,4 +1,4 @@
-# Bloghub - Multi-tenant Blog Platform
+# Publixy - Multi-tenant Blog Platform
 
 A modern, multi-tenant blog platform built with Next.js 15, Clerk authentication, and Drizzle ORM. Each organization gets its own dedicated blog space with custom subdomains.
 
