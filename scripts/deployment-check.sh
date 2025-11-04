@@ -34,15 +34,17 @@ required_vars=(
 )
 
 if [ -f .env.local ]; then
-    source .env.local 2>/dev/null
-    
+    # Safely check environment variables without sourcing the file
     for var in "${required_vars[@]}"; do
         echo -n "  $var... "
-        if [ -z "${!var}" ]; then
+        # Use grep to extract the value safely
+        value=$(grep "^${var}=" .env.local 2>/dev/null | cut -d'=' -f2- | tr -d '"' | tr -d "'")
+        
+        if [ -z "$value" ]; then
             echo -e "${RED}✗ Missing${NC}"
         else
             # Check if it's a placeholder value
-            if [[ "${!var}" == *"example"* ]] || [[ "${!var}" == *"xxxxx"* ]] || [[ "${!var}" == *"your_"* ]]; then
+            if [[ "$value" == *"example"* ]] || [[ "$value" == *"xxxxx"* ]] || [[ "$value" == *"your_"* ]]; then
                 echo -e "${YELLOW}⚠ Placeholder value detected${NC}"
             else
                 echo -e "${GREEN}✓${NC}"

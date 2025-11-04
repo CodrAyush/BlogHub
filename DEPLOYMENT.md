@@ -108,15 +108,23 @@ Alternatively, you can:
 2. Add your custom domain (e.g., `yourdomain.com`)
 3. Add wildcard subdomain: `*.yourdomain.com`
 4. Configure DNS with your domain provider:
+   
+   Follow Vercel's DNS configuration instructions for your domain:
+   - For CNAME setup (recommended): Point your domain and wildcard to Vercel's CNAME
+   - For A records: Use the IP addresses provided in your Vercel project settings
+   
+   Example configuration:
    ```
-   Type: A
+   Type: CNAME
    Name: @
-   Value: 76.76.21.21
+   Value: cname.vercel-dns.com
 
    Type: CNAME
    Name: *
    Value: cname.vercel-dns.com
    ```
+   
+   **Note:** DNS values may vary. Always refer to the DNS configuration shown in your Vercel project settings for the most current values.
 
 ### Step 7: Update Clerk Configuration
 
