@@ -1,5 +1,7 @@
 # Publixy - Multi-tenant Blog Platform
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CodrAyush/BlogHub&env=DATABASE_URL,NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,CLERK_SECRET_KEY,NEXT_PUBLIC_ROOT_DOMAIN&envDescription=Required%20environment%20variables%20for%20BlogHub&envLink=https://github.com/CodrAyush/BlogHub/blob/main/.env.example)
+
 A modern, multi-tenant blog platform built with Next.js 15, Clerk authentication, and Drizzle ORM. Each organization gets its own dedicated blog space with custom subdomains.
 
 ## Features
@@ -152,6 +154,7 @@ CREATE TABLE blogs (
 - `pnpm db:push` - Push schema changes to database
 - `pnpm db:studio` - Open Drizzle Studio
 - `pnpm db:generate` - Generate migrations
+- `pnpm deploy:check` - Check deployment readiness
 
 ### Adding New Features
 
@@ -162,11 +165,36 @@ CREATE TABLE blogs (
 
 ## Deployment
 
-### Vercel (Recommended)
+### Quick Deploy to Vercel (Recommended)
 
-1. Connect your repository to Vercel
-2. Set up environment variables in Vercel dashboard
-3. Deploy automatically on push to main branch
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CodrAyush/BlogHub&env=DATABASE_URL,NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,CLERK_SECRET_KEY,NEXT_PUBLIC_ROOT_DOMAIN&envDescription=Required%20environment%20variables%20for%20BlogHub&envLink=https://github.com/CodrAyush/BlogHub/blob/main/.env.example)
+
+For detailed deployment instructions, see **[DEPLOYMENT.md](./DEPLOYMENT.md)** which includes:
+- Complete step-by-step deployment guide
+- Database setup options (Vercel Postgres, Neon, Supabase, Railway)
+- Environment variable configuration
+- Custom domain and wildcard subdomain setup
+- Troubleshooting tips
+
+### Pre-Deployment Checklist
+
+Run the deployment readiness check:
+```bash
+pnpm deploy:check
+```
+
+This will verify:
+- Environment variables are configured
+- Dependencies are installed
+- Git status is clean
+
+### Quick Start
+
+1. Click the "Deploy with Vercel" button above
+2. Set up required environment variables (see [.env.example](./.env.example))
+3. Configure your database
+4. Set up Clerk authentication
+5. Add wildcard domain for subdomains
 
 ### Other Platforms
 
@@ -176,6 +204,8 @@ The app can be deployed to any platform that supports Next.js:
 - DigitalOcean App Platform
 - AWS Amplify
 
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for platform-specific instructions.
+
 ## Contributing
 
 1. Fork the repository
@@ -184,6 +214,8 @@ The app can be deployed to any platform that supports Next.js:
 4. Add tests if applicable
 5. Submit a pull request
 
+For detailed contribution guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md)
+
 ## License
 
 MIT License - see LICENSE file for details
@@ -191,3 +223,9 @@ MIT License - see LICENSE file for details
 ## Support
 
 For support, please open an issue in the GitHub repository or contact the development team.
+
+## Quick Links
+
+- 📖 [Deployment Guide](./DEPLOYMENT.md)
+- 🤝 [Contributing Guide](./CONTRIBUTING.md)
+- 📋 [Environment Variables](./.env.example)
