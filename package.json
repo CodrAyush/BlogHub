@@ -9,7 +9,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:check": "bash scripts/deployment-check.sh"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.27.1",

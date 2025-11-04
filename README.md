@@ -199,6 +199,8 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for platform-specific instructions.
 4. Add tests if applicable
 5. Submit a pull request
 
+For detailed contribution guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md)
+
 ## License
 
 MIT License - see LICENSE file for details
@@ -206,3 +208,9 @@ MIT License - see LICENSE file for details
 ## Support
 
 For support, please open an issue in the GitHub repository or contact the development team.
+
+## Quick Links
+
+- 📖 [Deployment Guide](./DEPLOYMENT.md)
+- 🤝 [Contributing Guide](./CONTRIBUTING.md)
+- 📋 [Environment Variables](./.env.example)
