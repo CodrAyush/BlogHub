@@ -162,11 +162,24 @@ CREATE TABLE blogs (
 
 ## Deployment
 
-### Vercel (Recommended)
+### Quick Deploy to Vercel (Recommended)
 
-1. Connect your repository to Vercel
-2. Set up environment variables in Vercel dashboard
-3. Deploy automatically on push to main branch
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CodrAyush/BlogHub)
+
+For detailed deployment instructions, see **[DEPLOYMENT.md](./DEPLOYMENT.md)** which includes:
+- Complete step-by-step deployment guide
+- Database setup options (Vercel Postgres, Neon, Supabase, Railway)
+- Environment variable configuration
+- Custom domain and wildcard subdomain setup
+- Troubleshooting tips
+
+### Quick Start
+
+1. Click the "Deploy with Vercel" button above
+2. Set up required environment variables (see [.env.example](./.env.example))
+3. Configure your database
+4. Set up Clerk authentication
+5. Add wildcard domain for subdomains
 
 ### Other Platforms
 
@@ -175,6 +188,8 @@ The app can be deployed to any platform that supports Next.js:
 - Railway
 - DigitalOcean App Platform
 - AWS Amplify
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for platform-specific instructions.
 
 ## Contributing
 
