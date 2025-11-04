@@ -1,5 +1,7 @@
 # Publixy - Multi-tenant Blog Platform
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CodrAyush/BlogHub&env=DATABASE_URL,NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,CLERK_SECRET_KEY,NEXT_PUBLIC_ROOT_DOMAIN&envDescription=Required%20environment%20variables%20for%20BlogHub&envLink=https://github.com/CodrAyush/BlogHub/blob/main/.env.example)
+
 A modern, multi-tenant blog platform built with Next.js 15, Clerk authentication, and Drizzle ORM. Each organization gets its own dedicated blog space with custom subdomains.
 
 ## Features
@@ -152,6 +154,7 @@ CREATE TABLE blogs (
 - `pnpm db:push` - Push schema changes to database
 - `pnpm db:studio` - Open Drizzle Studio
 - `pnpm db:generate` - Generate migrations
+- `pnpm deploy:check` - Check deployment readiness
 
 ### Adding New Features
 
@@ -164,7 +167,7 @@ CREATE TABLE blogs (
 
 ### Quick Deploy to Vercel (Recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CodrAyush/BlogHub)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CodrAyush/BlogHub&env=DATABASE_URL,NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,CLERK_SECRET_KEY,NEXT_PUBLIC_ROOT_DOMAIN&envDescription=Required%20environment%20variables%20for%20BlogHub&envLink=https://github.com/CodrAyush/BlogHub/blob/main/.env.example)
 
 For detailed deployment instructions, see **[DEPLOYMENT.md](./DEPLOYMENT.md)** which includes:
 - Complete step-by-step deployment guide
@@ -172,6 +175,18 @@ For detailed deployment instructions, see **[DEPLOYMENT.md](./DEPLOYMENT.md)** w
 - Environment variable configuration
 - Custom domain and wildcard subdomain setup
 - Troubleshooting tips
+
+### Pre-Deployment Checklist
+
+Run the deployment readiness check:
+```bash
+pnpm deploy:check
+```
+
+This will verify:
+- Environment variables are configured
+- Dependencies are installed
+- Git status is clean
 
 ### Quick Start
 
