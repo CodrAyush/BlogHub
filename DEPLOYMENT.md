@@ -113,18 +113,18 @@ Alternatively, you can:
    - For CNAME setup (recommended): Point your domain and wildcard to Vercel's CNAME
    - For A records: Use the IP addresses provided in your Vercel project settings
    
-   Example configuration:
+   Example CNAME configuration:
    ```
    Type: CNAME
    Name: @
-   Value: cname.vercel-dns.com
+   Value: [your-vercel-project].vercel-dns.com
 
    Type: CNAME
    Name: *
-   Value: cname.vercel-dns.com
+   Value: [your-vercel-project].vercel-dns.com
    ```
    
-   **Note:** DNS values may vary. Always refer to the DNS configuration shown in your Vercel project settings for the most current values.
+   **Important:** Replace `[your-vercel-project]` with the actual CNAME value shown in your Vercel project settings under Domains. DNS values are unique to each project and should not be guessed.
 
 ### Step 7: Update Clerk Configuration
 
